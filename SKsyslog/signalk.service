@@ -1,7 +1,7 @@
 [Service]
 ExecStart=/home/pi/.signalk/signalk-server
 Restart=always
-StandardOutput=syslog
+StandardOutput=null
 StandardError=syslog
 WorkingDirectory=/home/pi/.signalk
 User=pi
