@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -eq 0 ]
+  then echo "Don't run as root"
+  exit
+fi
+
 if grep -Fq "openplotter" /etc/xdg/menus/lxde-pi-applications.menu
 then
   echo "openplotter menu exists (1)"

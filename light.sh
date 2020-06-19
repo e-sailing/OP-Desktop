@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$EUID" -eq 0 ]
+  then echo "Don't run as root"
+  exit
+fi
 
 rm -rf ~/.config/gtk-3.0
 rm -rf ~/.config/libfm

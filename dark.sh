@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -eq 0 ]
+  then echo "Don't run as root"
+  exit
+fi
+
 if [ -d "~/.themes/PiX dark" ]; then
   echo "Dark theme exists"
 else
